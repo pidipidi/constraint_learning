@@ -1,6 +1,0 @@
-[submodule "pybullet-gym"]
-	path = pybullet-gym
-	url = https://github.com/benelot/pybullet-gym.git
-[submodule "spinningup"]
-	path = spinningup
-	url = https://github.com/openai/spinningup.git
