@@ -18,8 +18,8 @@ python test/test_pybullet_gym.py
 ~~~~
 
 
-
-# Tip for submodules
+# FAQ
+# Tips for submodules
 
 Fetch and update the submodule projects on submodule directories
 ~~~~bash
@@ -29,4 +29,16 @@ git submodule update --remote
 Push changes from the root directory
 ~~~~bash
 git push --recurse-submodules=check
+~~~~
+
+# Matplot Error
+Set tkagg as the backend
+~~~~bash
+emacs -nw ~/.config/matplotlib/matplotlibrc
+~~~~
+add "backend : tkagg"
+
+It there is an error "no module named tkinter":
+~~~~bash
+sudo apt-get install python3.7-tk
 ~~~~
