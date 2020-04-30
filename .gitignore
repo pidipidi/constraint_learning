@@ -1,0 +1,12 @@
+*~
+*.pyc
+*#
+.#*
+*.pkl
+*.zip
+*.bak
+*.bag
+
+# Specific files and folders
+############################
+.venv
