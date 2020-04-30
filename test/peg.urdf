@@ -1,0 +1,93 @@
+<?xml version="1.0" ?>
+<robot name="peg"
+       xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <material name="white">
+    <color rgba="1 1 1 0.6"/>
+  </material>
+  <material name="black">
+    <color rgba="0 0 0 1"/>
+  </material>
+  <material name="red">
+    <color rgba="1 0 0 1"/>
+  </material>
+  <material name="green">
+    <color rgba="0 1 0 1"/>
+  </material>
+  <material name="blue">
+    <color rgba="0 0 1 1"/>
+  </material>
+  
+  <link name="world"/>
+
+  <joint name="x_axis_joint" type="prismatic">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <parent link="world" />
+    <child link="x_axis_link" />
+    <axis xyz="1 0 0" />
+    <limit effort="10000" lower="-0.5" upper="0.5"
+           velocity="0.2" />
+    <!--<dynamics damping="100.0" />-->
+  </joint>
+  <link name="x_axis_link"/>  
+  <joint name="y_axis_joint" type="prismatic">
+    <origin xyz="0 0 0" rpy="0.0 0.0 0.0"/>
+    <parent link="x_axis_link" />
+    <child link="y_axis_link" />
+    <axis xyz="0 1 0" />
+    <limit effort="10000" lower="-0.5" upper="0.5"
+           velocity="0.2" />
+    <!--<dynamics damping="100.0" />-->
+  </joint>
+  <link name="y_axis_link"/>  
+  
+  <joint name="z_axis_joint" type="revolute">
+    <origin xyz="0 0 0" rpy="0.0 0.0 0.0"/>
+    <parent link="y_axis_link" />
+    <child link="peg" />
+    <axis xyz="0 0 1" />
+    <limit effort="10000" lower="-3.14" upper="3.14"
+           velocity="0.5" />
+    <!--<dynamics damping="100.0" />-->
+  </joint>
+  
+  <link name="peg">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <box size="0.11 0.08 0.053"/>
+      </geometry>
+      <material name="green"/>            
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <box size="0.11 0.08 0.053"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0"/>
+      <mass value="1.0"/>
+      <inertia ixx="1." ixy="0" ixz="0" iyy="1." iyz="0.0"
+               izz="1."/>
+    </inertial>
+  </link>
+
+  <!-- target -->
+  <joint name="target_joint" type="fixed">
+    <parent link="world"/>
+    <child link="target"/>
+  </joint>
+  <link name="target">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 -0.45 0"/>
+      <geometry>
+        <box size="0.11 0.08 0.053"/>
+      </geometry>
+      <material name="white"/>            
+    </visual>
+  </link>
+  
+  
+</robot>
+

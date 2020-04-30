@@ -1,0 +1,6 @@
+[submodule "spinningup"]
+	path = spinningup
+	url = https://github.com/pidipidi/spinningup.git
+[submodule "pybullet-gym"]
+	path = pybullet-gym
+	url = https://github.com/pidipidi/pybullet-gym.git

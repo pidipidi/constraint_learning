@@ -1,0 +1,4 @@
+
+
+export PYTHONPATH="${PYTHONPATH}:$(dirname $(readlink -f $0))/pybullet-gym"
+export PYTHONPATH="${PYTHONPATH}:$(dirname $(readlink -f $0))/spinningup"
