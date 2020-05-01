@@ -138,9 +138,9 @@
   </joint>
   <link name="hole_left">
     <visual>
-      <origin rpy="0 0 0" xyz="-0.28 -0.45  0.0"/>
+      <origin rpy="0 0 0" xyz="-0.28 -0.49  0.0"/>
       <geometry>
-        <box size="0.44 0.1 0.053"/>
+        <box size="0.44 0.02 0.053"/>
       </geometry>
       <material name="red"/>            
     </visual>
@@ -158,9 +158,9 @@
   </joint>
   <link name="hole_right">
     <visual>
-      <origin rpy="0 0 0" xyz="0.28 -0.45  0.0"/>
+      <origin rpy="0 0 0" xyz="0.28 -0.49  0.0"/>
       <geometry>
-        <box size="0.44 0.1 0.053"/>
+        <box size="0.44 0.02 0.053"/>
       </geometry>
       <material name="red"/>            
     </visual>

@@ -55,14 +55,14 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <box size="0.11 0.08 0.053"/>
+        <box size="0.11 0.02 0.053"/>
       </geometry>
       <material name="green"/>            
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <box size="0.11 0.08 0.053"/>
+        <box size="0.11 0.02 0.053"/>
       </geometry>
     </collision>
     <inertial>
@@ -80,9 +80,9 @@
   </joint>
   <link name="target">
     <visual>
-      <origin rpy="0 0 0" xyz="0 -0.45 0"/>
+      <origin rpy="0 0 0" xyz="0 -0.49 0"/>
       <geometry>
-        <box size="0.11 0.08 0.053"/>
+        <box size="0.11 0.02 0.053"/>
       </geometry>
       <material name="white"/>            
     </visual>
