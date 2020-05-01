@@ -21,6 +21,12 @@ python test/test_pybullet_gym.py
 # FAQ
 # Tips for submodules
 
+Install(complie) submodule
+~~~~bash
+cd submodule
+pip install --ignore-installed pip
+~~~~
+
 Fetch and update the submodule projects on submodule directories
 ~~~~bash
 git submodule update --remote
