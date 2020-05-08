@@ -26,7 +26,7 @@ p = env.robot._p
 x_vel = p.addUserDebugParameter('x_vel', -env.robot.jdict['x_slider'].jointMaxVelocity, env.robot.jdict['x_slider'].jointMaxVelocity, 0)
 y_vel = p.addUserDebugParameter('y_vel', -env.robot.jdict['y_slider'].jointMaxVelocity, env.robot.jdict['y_slider'].jointMaxVelocity, 0)
 th_vel = p.addUserDebugParameter('th_vel', -env.robot.jdict['z_axis_joint'].jointMaxVelocity, env.robot.jdict['z_axis_joint'].jointMaxVelocity, 0)
-finger_pos = p.addUserDebugParameter('gripper_pos', 0.005, 0.13, 0.005)
+finger_pos = p.addUserDebugParameter('gripper_pos', 0.005, 0.04, 0.04)
 #from IPython import embed; embed(); sys.exit()
 
 while 1:
