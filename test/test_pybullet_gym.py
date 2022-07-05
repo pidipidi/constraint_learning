@@ -4,7 +4,7 @@ import numpy as np
 import gym  # open ai gym
 import pybulletgym  # register PyBullet enviroments with open ai gym
 #import pybullet as p
-from test_spinningup_cnn import *
+#from test_spinningup_cnn import *
 
 #p.connect(p.DIRECT)
 #env = gym.make("ReacherPyBulletEnv-v0")
@@ -56,9 +56,10 @@ while 1:
     rsum += r
     ## still_open = env.render(mode='human')
     still_open = env.render(mode='rgb_array')
-    ## print ("[%d] r:[%.2f] done:[%d]"%(cnt,r,done))
+    print ("[%d] r:[%.2f] done:[%d]"%(cnt,r,done))
     if done:
         env.reset()
+        cnt = 0
     ##     break
     time.sleep(1./240.)
     #time.sleep(1./100.)

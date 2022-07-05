@@ -12,7 +12,7 @@ if __name__ == '__main__':
     parser.add_argument('--deterministic', '-d', action='store_true')
     args = parser.parse_args() 
     
-    env, get_action = tp.load_policy_and_env('CuboidPeginhole2DPyBulletEnv-v0',
+    env, get_action = tp.load_policy_and_env('GripperPegInHole2DPyBulletEnv-v1',
                                              args.itr if args.itr >=0
                                              else 'last',
                                              args.deterministic)

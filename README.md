@@ -17,6 +17,18 @@ source activate.sh
 python test/test_pybullet_gym.py
 ~~~~
 
+# Training and testing the peg-in-shallow-hole task
+~~~~bash
+source activate.sh
+python test/train_spinningup_torch.py
+~~~~
+After running the above code (or if it converges), run the following code
+~~~~bash
+source activate.sh
+python test/test_spinningup_torch.py
+~~~~
+
+
 
 # FAQ
 # Tips for submodules
