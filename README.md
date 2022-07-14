@@ -25,7 +25,7 @@ python test/train_spinningup_torch.py
 After running the above code (or if it converges), run the following code
 ~~~~bash
 source activate.sh
-python test/test_spinningup_torch.py
+python test/test_spinningup_torch.py -l 100
 ~~~~
 
 
